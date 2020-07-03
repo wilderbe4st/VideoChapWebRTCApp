@@ -1,14 +1,17 @@
 import React,{useEffect} from 'react'
-import openSocket from 'socket.io-client'
+
+import Chat from './Chat'
+import Video from './Video'
 
 export default function Main() {
-    useEffect(() => {        
-        console.log("working");
-        const socket =openSocket("http://localhost:3001/");
-    }, );
+    
     return (
-        <div>
-            <h1>Main</h1>
+        <div className="container">
+        <div className="row">
+            <div className="col-6"><Chat/></div>
+            <div className="col-6"><Video/> </div>
+        </div>
+            
         </div>
     )
 }
